@@ -1,0 +1,43 @@
+{
+    "name": "muzmatchTest",
+    "description": "Technical test PHP",
+    "authors": [
+        {
+            "name": "abdou Kaba",
+            "email": "akabadev@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "doctrine/orm": "^2.7",
+        "monolog/monolog": "^2.1",
+        "php-di/php-di": "^6.2",
+        "slim/psr7": "^1.1",
+        "slim/slim": "^4.5"
+    },
+    "require-dev": {
+        "phpstan/extension-installer": "^1.0.4",
+        "phpstan/phpstan": "^0.12.33",
+        "guzzlehttp/guzzle": "^6.5",
+        "phpunit/phpunit": "^8.0.0"
+    },
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8080 -t public",
+        "test": "phpunit"
+    }
+}
